@@ -1,0 +1,24 @@
+
+def calculate_common(A,B,C):
+    if len(A) > len(B):
+        small_array = B
+    else:
+        small_array = A
+    if len(small_array) > len(C):
+        smallest_array = C
+    else:
+        smallest_array = small_array
+
+    for i in range(len(smallest_array)):
+        if (smallest_array[i] in A and smallest_array[i] in B and smallest_array[i] in C):
+            return smallest_array[i]
+    return -100000
+
+if __name__=="__main__":
+    C = [1,6,10,14] 
+    B = [-1, 4, 5,6,7,8,50]
+    A = [6,7,10,25,30,63,64]
+
+    smallest_common_number = calculate_common(A,B,C)
+    if smallest_common_number != -10000:
+        print("found "+str(smallest_common_number))
