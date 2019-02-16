@@ -1,5 +1,7 @@
+#Find smallest common number in three arrays
 
 def calculate_common(A,B,C):
+    #Find shortest array
     if len(A) > len(B):
         small_array = B
     else:
@@ -9,6 +11,7 @@ def calculate_common(A,B,C):
     else:
         smallest_array = small_array
 
+    #loop through to find smallest element
     for i in range(len(smallest_array)):
         if (smallest_array[i] in A and smallest_array[i] in B and smallest_array[i] in C):
             return smallest_array[i]
